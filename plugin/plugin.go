@@ -6,5 +6,6 @@ import (
 )
 
 func init() {
-	udf.RegisterGlobalUDF("to_jpeg", udf.MustConvertGeneric(image.ToJPEG))
+	udf.RegisterGlobalUDF("encode_jpeg", udf.MustConvertGeneric(image.EncodeJPEG))
+	udf.RegisterGlobalUDF("decode_jpeg", udf.MustConvertGeneric(image.DecodeJPEG))
 }
